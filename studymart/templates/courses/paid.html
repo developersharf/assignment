@@ -1,0 +1,67 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}  
+
+
+{% block content %}
+  
+    <!-- start Hero -->
+ 
+
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-12">
+          <img src="{% static 'Images/hero-img.png' %}" class="img-fluid rounded-2 mb-3" alt="...">
+        </div>
+        <div class="col-12">
+          <h1 style="font-size: 124px; font-weight: 700; letter-spacing: -7px; font-family: 'Inter';">What is Lorem Ipsum?</h1>
+          <p class="mt-2 w-50">Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+          <button type="button" class="btn btn-success mt-2 px-5 py-2">Go to Success</button>
+        </div>
+      </div>
+    </div>
+    
+    <!--end Hero -->
+
+    <!-- start contact form -->
+
+    <div class="container mt-3 mb-3">
+      <div class="row">
+        <div class="col-4 ">
+          <div class="card" style="width: 100%;">
+            <img src="{% static 'Images/profile.jpeg' %}" class="card-img-top" alt="..." style=" height: 400px;">
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card p-2" style="width: 100%;">
+            <form>
+              <div class="mb-3 ">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit" class="btn btn-success mt-2 px-5 py-2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- end contact form -->
+
+
+{% endblock content %}
+  

@@ -1,0 +1,41 @@
+{% extends 'common_code/base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock title %}
+
+
+{% block content %}
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                <form action="" method="POST" novalidate>
+                    {% csrf_token %}
+
+                    {% if frm.non_field_errors %}
+                        
+                        {% for error in frm.non_field_errors %}
+                            <p>{{error}}</p>
+                        {% endfor %}
+                            
+                    {% endif %}
+                    
+
+                    {% for fm in frm %}
+                        {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}
+                        <br>
+                        <br>
+                    {% endfor %}
+                    <input type="submit" value="Login">
+                    <div class="container">
+                        
+                        <a href="{% url 'registration' %}">Haven't registered yet?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}
+    
